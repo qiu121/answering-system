@@ -24,7 +24,7 @@ class Widgets:
         window.geometry('%dx%d+%d-%d' % (width, height, x, y))  # 设置窗口大小及坐标
         window.configure(background="white")  # 设置背景颜色
         window.title("简易答题系统")  # 设置窗口标题
-        window.attributes("-alpha", 0.8)  # 设置窗口透明度,数值越小越透明
+        window.attributes("-alpha", 0.9)  # 设置窗口透明度,数值越小越透明
         window.resizable(False, False)  # 窗口大小不可变
 
         self.main_page()
@@ -89,7 +89,7 @@ class Widgets:
             db = Database()
             question = db.query_question(self.num)
             self.str.set(question)
-            messagebox.showinfo('提示', '没有查询到该题号对应的题目\n\t当前题号 %d' % self.num)
+            # messagebox.showinfo('提示', '没有查询到该题号对应的题目\n\t当前题号 %d' % self.num)
         if event.widget['text'] == '下一题':
             self.num += 1
             db = Database()
