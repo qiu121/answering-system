@@ -35,7 +35,7 @@
 
 ```MySQL 
 # utf8mb4 才是MySQL里真正的UTF-8
-CREATE TABLE IF NOT EXISTS answering_system CHARACTER SET utf8mb4
+CREATE DATABASE IF NOT EXISTS answering_system CHARACTER SET utf8mb4
 ```
 
 - 执行`as.sql`脚本，初始化数据库
